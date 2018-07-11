@@ -10,7 +10,7 @@ import pl.sdacademy.day2.shop.CoffeeShop;
 public class Main {
 
     public static void main(String[] args) {
-      WaterSource waterSource = new WaterSource(2000);
+      WaterSource waterSource = new WaterSource(350);
       CoffeeBeansSource beansSource = new CoffeeBeansSource(1000);
       CoffeeMachinePump pump = new CoffeeMachinePump();
 
@@ -20,7 +20,19 @@ public class Main {
 
       Coffee coffee = coffeeShop.orderCoffee();
 
-      System.out.println(coffee);
+      if (coffee == null) {
+        System.out.println("No coffee for you!");
+      } else {
+        System.out.println(coffee);
+      }
+
+      Coffee coffee2 = coffeeShop.orderCoffee();
+
+      if (coffee2 == null) {
+        System.out.println("No coffee for you!");
+      } else {
+        System.out.println(coffee2);
+      }
     }
 
 }
